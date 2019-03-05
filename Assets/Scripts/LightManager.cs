@@ -23,6 +23,12 @@ public class LightManager : MonoBehaviour
 
     private void LightAdjustment()
     {
-        //transform.rotation = Quaternion.LookRotation(turnTable.TargetModel.LightVector);
+        //transform.rotation = Quaternion.Euler(turnTable.TargetModel.LightVector);
+        //iTween.RotateTo(gameObject,iTween.Hash
+    }
+
+    private void Update()
+    {
+        iTween.RotateUpdate(gameObject, iTween.Hash("rotation", turnTable.TargetModel.LightVector));
     }
 }
